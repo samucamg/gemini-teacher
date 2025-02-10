@@ -1,51 +1,49 @@
-# Gemini 英语口语助手
+# Assistente de Conversação em inglês com Gemini
 
-这是一个基于 Google Gemini AI 的英语口语练习助手，它能实时识别你的英语发音，提供即时反馈和纠正建议。
+Este é um assistente de prática de conversação em inglês baseado no Google Gemini AI, que pode reconhecer sua pronúncia em inglês em tempo real e fornecer feedback instantâneo e sugestões de correção.
 
-Make by [Box](https://x.com/boxmrchen)
+## Características
 
-## 功能特点
+-🎤 Reconhecimento de fala em tempo real
+- 🤖 Avaliação de pronúncia com tecnologia de IA
+- 📝 Correção gramatical
+- 🔄 Prática de diálogo situacional
+- 🎯 Orientação de pronúncia direcionada
+- 💡 Troca de cena inteligente
 
-- 🎤 实时语音识别
-- 🤖 AI 驱动的发音评估
-- 📝 语法纠正
-- 🔄 情景对话练习
-- 🎯 针对性发音指导
-- 💡 智能场景切换
+## Requisitos do sistema
 
-## 系统要求
+-Python 3.11+ (obrigatório)
+-Equipamento de microfone
+-Conexão de rede.
 
-- Python 3.11+ (必须)
-- 麦克风设备
-- 网络连接
+## Pré-dependências
 
-## 前置依赖
+Você precisa de uma chave de API Gemini, que é gratuita 4 milhões de vezes por dia, o que é suficiente para seu uso.
 
-需要一个 Gemini的API Key，这个API Key每天免费四百万次，足够使用了。
+Acesse esta página [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey) para gerá-lo.
 
-到这个页面 [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey) 生成即可。
+## Instalação
 
-## 安装
-
-1. 克隆仓库：
+1. Clone o repositório:
 ```bash
 git clone https://github.com/nishuzumi/gemini-teacher.git
 cd gemini-teacher
 ```
 
-2. 创建并激活虚拟环境（推荐）：
+2. Crie e ative um ambiente virtual (recomendado):
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # Unix/macOS
-# 或
+# ou
 .venv\Scripts\activate  # Windows
 ```
 
-3. 安装依赖：
+3. Instale as dependências:
 
-在安装 Python 依赖前，请先安装以下系统依赖：
+Antes de instalar as dependências do Python, instale as seguintes dependências do sistema:
 
-- Windows: 无需额外安装
+- Windows: Nenhuma instalação adicional necessária
 - macOS: `brew install portaudio`
 - Ubuntu/Debian: `sudo apt-get install portaudio19-dev python3-pyaudio`
 
@@ -53,40 +51,41 @@ source .venv/bin/activate  # Unix/macOS
 pip install -r requirements.txt
 ```
 
-## 使用方法
+## Uso
 
-1. 设定环境
-新建一份 `.env` 文件，将`.env.example` 内容复制过去，然后修改。
+1. Configure o ambiente
+Crie um novo arquivo `.env`, copie o conteúdo de `.env.example` para ele e modifique-o.
 
-如果你需要设定代理，请填写 `HTTP_PROXY`，例如 `HTTP_PROXY=http://127.0.0.1:7890`
+Se você precisar definir um proxy, preencha `HTTP_PROXY`, por exemplo `HTTP_PROXY=http://127.0.0.1:7890`
 
-`GOOGLE_API_KEY` 填写谷歌Gemini的API Key
-### 开启语音功能
-这个功能按需开启，`ELEVENLABS_API_KEY` 是语音功能的API KEY。
+`GOOGLE_API_KEY` preencha a chave da API do Google Gemini
+### Habilitar a função de voz
+Este recurso é habilitado sob demanda. `ELEVENLABS_API_KEY` é a CHAVE de API para o recurso de voz.
 
-获取方式：
-- 打开网站 [https://elevenlabs.io/](https://try.elevenlabs.io/2oulemau2lxk)
-- 点击右上角的Try for free，进行注册，有免费的1000个额度
-- 到个人设置中，生成API Key填入即可
+Como obter:
+- Abra o site [https://elevenlabs.io/](https://try.elevenlabs.io/2oulemau2lxk)
+- Clique em Experimentar gratuitamente no canto superior direito para se registrar e ganhar 1.000 créditos grátis
+- Vá para as configurações pessoais, gere uma chave de API e preencha-a
 
 ```bash
 python starter.py
 ```
 
-2. 按照提示说出英语句子
-3. 等待 AI 助手的反馈
-4. 根据反馈改进发音
+2. Fale frases em inglês de acordo com as instruções
+3. Aguarde o feedback do assistente de IA
+4. Melhore a pronúncia com base no feedback
 
-## 交互说明
+## Instruções de interação
 
-- 🎤 : 正在录音
-- ♻️ : 正在处理
-- 🤖 : AI 反馈
+- 🎤 : Gravação
+- ♻️ : Processando
+- 🤖 : Feedback de IA
 
-## 许可证
+## Licença
 
 MIT
 
-## 贡献
+## contribuir
 
-欢迎提交 Issue 和 Pull Request！
+Problemas e solicitações de pull são bem-vindos!
+## Licença
